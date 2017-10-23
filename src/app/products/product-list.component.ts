@@ -8,6 +8,8 @@ export class ProductListComponent {
     pageTitle: string = 'Product List';
     imageWidth: number = 50;
     imageMargin: number = 2;
+    showImages: boolean = false;
+    listFilter: string = 'Cart';
     products: any[]= [{
         "productId": 1,
         "productName": "Leaf Rake",
@@ -28,4 +30,7 @@ export class ProductListComponent {
         "starRating": 4.2,
         "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
     }];
+    toogleImage(): void{
+        this.showImages = ! this.showImages
+    }
 }
